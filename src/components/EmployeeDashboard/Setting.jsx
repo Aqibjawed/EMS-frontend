@@ -30,13 +30,13 @@ const Setting = () => {
         }
         else {
             try{
-                const response = await axios.put('http://localhost:5000/api/setting/change-password', setting, {
+                const response = await axios.put('https://ems-api-vert.vercel.app/api/setting/change-password', setting, {
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`
                     },
                 });
                 if(response.data.success){
-                    window.location.href = 'http://localhost:5173/login';
+                    window.location.href = 'https://ems-frontend-vert.vercel.app/login';
                     setError('')
                 }
             } catch(error) {

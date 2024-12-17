@@ -37,7 +37,7 @@ const View = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                 <div>
                     <img 
-                        src={`http://localhost:5000/${employee.userId.profileImage}`} 
+                        src={employee.userId.profileImage} 
                         className='rounded-full border w-72'
                     />
                 </div>
